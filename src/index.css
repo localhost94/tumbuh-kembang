@@ -1,0 +1,103 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans:
+    'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --color-ink: #0b2b2a;
+  --color-mint-50: #eefbf6;
+  --color-mint-100: #d5f5e8;
+
+  --animate-float-slow: float 9s ease-in-out infinite;
+  --animate-float-slower: float 14s ease-in-out infinite;
+  --animate-rise: rise 0.5s ease-out both;
+  --animate-dash: dash 2.4s ease-out both;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-18px) translateX(10px);
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f6fbf9;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #99f6e4, #5eead4, #34d399);
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: -0.4rem;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 3px solid #0d9488;
+  box-shadow: 0 2px 8px rgb(13 148 136 / 0.35);
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-track {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #99f6e4, #5eead4, #34d399);
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 9999px;
+  background: #ffffff;
+  border: 3px solid #0d9488;
+  cursor: pointer;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

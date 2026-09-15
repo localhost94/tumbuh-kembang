@@ -1,0 +1,162 @@
+import type { AgeId } from './ageSegments'
+
+export interface Milestone {
+  id: string
+  text: string
+}
+
+/**
+ * Penanda perkembangan anak (Stimulasi, Deteksi, dan Intervensi Dini Tumbuh Kembang / SDIDTK)
+ * sebagaimana tertera pada Buku KIA 2024, per rentang usia.
+ */
+export const MILESTONES: Partial<Record<AgeId, Milestone[]>> = {
+  m1_3: [
+    { id: 'm1_3-1', text: 'Bayi bisa mengangkat kepala mandiri hingga setinggi 45 derajat?' },
+    { id: 'm1_3-2', text: 'Bayi bisa menggerakkan kepala dari kiri/kanan ke tengah?' },
+    { id: 'm1_3-3', text: 'Bayi bisa melihat dan menatap wajah anda?' },
+    { id: 'm1_3-4', text: 'Bayi bisa mengoceh spontan atau bereaksi dengan mengoceh?' },
+    { id: 'm1_3-5', text: 'Bayi suka tertawa keras?' },
+    { id: 'm1_3-6', text: 'Bayi bereaksi terkejut terhadap suara keras?' },
+    { id: 'm1_3-7', text: 'Bayi membalas tersenyum ketika diajak bicara/tersenyum?' },
+    {
+      id: 'm1_3-8',
+      text: 'Bayi mengenal ibu dengan penglihatan, penciuman, pendengaran, dan kontak?',
+    },
+  ],
+  m3_6: [
+    { id: 'm3_6-1', text: 'Bayi bisa berbalik dari telungkup ke telentang?' },
+    { id: 'm3_6-2', text: 'Bayi bisa mengangkat kepala secara mandiri hingga tegak 90°?' },
+    { id: 'm3_6-3', text: 'Bayi bisa mempertahankan posisi kepala tetap tegak dan stabil?' },
+    { id: 'm3_6-4', text: 'Bayi bisa menggenggam mainan kecil atau mainan bertangkai?' },
+    { id: 'm3_6-5', text: 'Bayi bisa meraih benda yang ada dalam jangkauannya?' },
+    { id: 'm3_6-6', text: 'Bayi bisa mengamati tangannya sendiri?' },
+    { id: 'm3_6-7', text: 'Bayi berusaha memperluas pandangan?' },
+    { id: 'm3_6-8', text: 'Bayi mengarahkan matanya pada benda-benda kecil?' },
+    { id: 'm3_6-9', text: 'Bayi mengeluarkan suara gembira bernada tinggi atau memekik?' },
+    {
+      id: 'm3_6-10',
+      text: 'Bayi tersenyum ketika melihat mainan/gambar yang menarik saat bermain sendiri?',
+    },
+  ],
+  m6_9: [
+    { id: 'm6_9-1', text: 'Bayi bisa duduk secara mandiri?' },
+    { id: 'm6_9-2', text: 'Bayi belajar berdiri, kedua kakinya menyangga sebagian berat badan?' },
+    { id: 'm6_9-3', text: 'Bayi bisa merangkak meraih mainan atau mendekati seseorang?' },
+    { id: 'm6_9-4', text: 'Bayi bisa memindahkan benda dari satu tangan ke tangan lainnya?' },
+    {
+      id: 'm6_9-5',
+      text: 'Bayi bisa memungut 2 benda, kedua tangan memegang 2 benda pada saat bersamaan?',
+    },
+    { id: 'm6_9-6', text: 'Bayi bisa memungut benda sebesar kacang dengan cara meraup?' },
+    { id: 'm6_9-7', text: 'Bayi bersuara tanpa arti, mamama, bababa, dadada, tatatata?' },
+    { id: 'm6_9-8', text: 'Bayi mencari mainan/benda yang dijatuhkan?' },
+    { id: 'm6_9-9', text: 'Bayi bermain tepuk tangan/cilukba?' },
+    { id: 'm6_9-10', text: 'Bayi bergembira dengan melempar benda?' },
+  ],
+  m9_12: [
+    { id: 'm9_12-1', text: 'Bayi bisa mengangkat badannya ke posisi berdiri?' },
+    { id: 'm9_12-2', text: 'Bayi belajar berdiri selama 30 detik atau berpegangan di kursi?' },
+    { id: 'm9_12-3', text: 'Bayi dapat berjalan dengan dituntun?' },
+    { id: 'm9_12-4', text: 'Bayi mengulurkan lengan/badan untuk meraih mainan yang diinginkan?' },
+    { id: 'm9_12-5', text: 'Bayi bisa menggenggam erat pensil?' },
+    { id: 'm9_12-6', text: 'Bayi memasukkan benda ke mulut?' },
+    { id: 'm9_12-7', text: 'Bayi mengulang menirukan bunyi yang didengar?' },
+    { id: 'm9_12-8', text: 'Bayi menyebut 2–3 suku kata yang sama tanpa arti?' },
+    { id: 'm9_12-9', text: 'Bayi mengeksplorasi sekitar, ingin tahu, ingin menyentuh apa saja?' },
+    { id: 'm9_12-10', text: 'Bayi bereaksi terhadap suara yang perlahan atau bisikan?' },
+    { id: 'm9_12-11', text: 'Bayi senang diajak bermain cilukba?' },
+    { id: 'm9_12-12', text: 'Bayi mengenal anggota keluarga, takut pada orang yang belum dikenal?' },
+  ],
+  m12_18: [
+    { id: 'm12_18-1', text: 'Anak bisa berdiri sendiri tanpa berpegangan?' },
+    { id: 'm12_18-2', text: 'Anak bisa membungkuk memungut mainan kemudian berdiri kembali?' },
+    { id: 'm12_18-3', text: 'Anak bisa berjalan mundur lima langkah?' },
+    { id: 'm12_18-4', text: 'Anak bisa memanggil ayah dengan kata "papa", ibu dengan kata "mama"?' },
+    { id: 'm12_18-5', text: 'Anak bisa menumpuk dua kubus?' },
+    { id: 'm12_18-6', text: 'Anak bisa memasukkan kubus di kotak?' },
+    {
+      id: 'm12_18-7',
+      text: 'Anak bisa menunjuk apa yang diinginkan tanpa menangis/merengek, mengeluarkan suara menyenangkan atau menarik tangan ibu?',
+    },
+    { id: 'm12_18-8', text: 'Anak bisa memperlihatkan rasa cemburu/bersaing?' },
+  ],
+  m18_24: [
+    { id: 'm18_24-1', text: 'Anak bisa berdiri sendiri tanpa berpegangan 30 detik?' },
+    { id: 'm18_24-2', text: 'Anak bisa berjalan tanpa terhuyung-huyung?' },
+    { id: 'm18_24-3', text: 'Anak bisa menumpuk 4 buah kubus?' },
+    { id: 'm18_24-4', text: 'Anak bisa memungut benda kecil dengan ibu jari dan jari telunjuk?' },
+    { id: 'm18_24-5', text: 'Anak bisa menggelindingkan bola ke arah sasaran?' },
+    { id: 'm18_24-6', text: 'Anak bisa menyebut 3–6 kata yang mempunyai arti?' },
+    { id: 'm18_24-7', text: 'Anak bisa membantu/menirukan pekerjaan rumah tangga?' },
+    { id: 'm18_24-8', text: 'Anak bisa memegang cangkir sendiri, belajar makan-minum sendiri?' },
+  ],
+  y2_3: [
+    { id: 'y2_3-1', text: 'Anak bisa jalan naik tangga sendiri?' },
+    { id: 'y2_3-2', text: 'Anak bisa bermain dan menendang bola kecil?' },
+    { id: 'y2_3-3', text: 'Anak bisa mencoret-coret pensil pada kertas?' },
+    { id: 'y2_3-4', text: 'Anak bisa bicara dengan baik, menggunakan 2 kata?' },
+    { id: 'y2_3-5', text: 'Anak bisa menunjuk 1 atau lebih bagian tubuhnya ketika diminta?' },
+    {
+      id: 'y2_3-6',
+      text: 'Anak bisa melihat gambar dan dapat menyebut dengan benar nama 2 benda atau lebih?',
+    },
+    {
+      id: 'y2_3-7',
+      text: 'Anak bisa membantu memungut mainannya sendiri atau membantu mengangkat piring jika diminta?',
+    },
+    { id: 'y2_3-8', text: 'Anak bisa makan nasi sendiri tanpa banyak tumpah?' },
+    { id: 'y2_3-9', text: 'Anak bisa melepas pakaiannya sendiri?' },
+  ],
+  y3_4: [
+    { id: 'y3_4-1', text: 'Anak bisa berdiri 1 kaki 2 detik?' },
+    { id: 'y3_4-2', text: 'Anak bisa melompat kedua kaki diangkat?' },
+    { id: 'y3_4-3', text: 'Anak bisa mengayuh sepeda roda tiga?' },
+    { id: 'y3_4-4', text: 'Anak bisa menggambar garis lurus?' },
+    { id: 'y3_4-5', text: 'Anak bisa menumpuk 8 buah kubus?' },
+    { id: 'y3_4-6', text: 'Anak bisa mengenal 2–4 warna?' },
+    { id: 'y3_4-7', text: 'Anak bisa menyebut nama, umur, tempat?' },
+    { id: 'y3_4-8', text: 'Anak bisa mengerti arti kata di atas, di bawah, di depan?' },
+    { id: 'y3_4-9', text: 'Anak bisa mendengarkan cerita?' },
+    { id: 'y3_4-10', text: 'Anak bisa mencuci dan mengeringkan tangan sendiri?' },
+    { id: 'y3_4-11', text: 'Anak bermain bersama teman, mengikuti aturan permainan?' },
+    { id: 'y3_4-12', text: 'Anak bisa mengenakan sepatu sendiri?' },
+    { id: 'y3_4-13', text: 'Anak bisa mengenakan celana panjang, kemeja, baju?' },
+  ],
+  y4_5: [
+    { id: 'y4_5-1', text: 'Anak bisa berdiri 1 kaki 6 detik?' },
+    { id: 'y4_5-2', text: 'Anak bisa melompat-lompat 1 kaki?' },
+    { id: 'y4_5-3', text: 'Anak bisa menari?' },
+    { id: 'y4_5-4', text: 'Anak bisa menggambar tanda silang?' },
+    { id: 'y4_5-5', text: 'Anak bisa menggambar lingkaran?' },
+    { id: 'y4_5-6', text: 'Anak bisa menggambar orang dengan 3 bagian tubuh?' },
+    { id: 'y4_5-7', text: 'Anak bisa mengancing baju atau pakaian boneka?' },
+    { id: 'y4_5-8', text: 'Anak bisa menyebut nama lengkap tanpa dibantu?' },
+    { id: 'y4_5-9', text: 'Anak bisa senang menyebut kata-kata baru?' },
+    { id: 'y4_5-10', text: 'Anak bisa senang bertanya tentang sesuatu?' },
+    { id: 'y4_5-11', text: 'Anak bisa menjawab pertanyaan dengan kata-kata yang benar?' },
+    { id: 'y4_5-12', text: 'Anak bisa bicara yang mudah dimengerti?' },
+    {
+      id: 'y4_5-13',
+      text: 'Anak bisa membandingkan/membedakan sesuatu dari ukuran dan bentuknya?',
+    },
+    { id: 'y4_5-14', text: 'Anak bisa menyebut angka, menghitung jari?' },
+  ],
+  y5_6: [
+    { id: 'y5_6-1', text: 'Anak bisa berjalan lurus?' },
+    { id: 'y5_6-2', text: 'Anak bisa berdiri dengan 1 kaki selama 11 detik?' },
+    { id: 'y5_6-3', text: 'Anak bisa menggambar dengan 6 bagian, menggambar orang lengkap?' },
+    { id: 'y5_6-4', text: 'Anak bisa menangkap bola kecil dengan kedua tangan?' },
+    { id: 'y5_6-5', text: 'Anak bisa menggambar segi empat?' },
+    { id: 'y5_6-6', text: 'Anak bisa mengerti arti lawan kata?' },
+    { id: 'y5_6-7', text: 'Anak bisa mengerti pembicaraan yang menggunakan 7 kata atau lebih?' },
+    {
+      id: 'y5_6-8',
+      text: 'Anak bisa menjawab pertanyaan tentang benda terbuat dari apa dan kegunaannya?',
+    },
+    { id: 'y5_6-9', text: 'Anak bisa mengenal angka, bisa menghitung angka 5–10?' },
+    { id: 'y5_6-10', text: 'Anak bisa mengenal warna-warni?' },
+    { id: 'y5_6-11', text: 'Anak bisa mengungkapkan simpati?' },
+    { id: 'y5_6-12', text: 'Anak bisa mengikuti aturan permainan?' },
+    { id: 'y5_6-13', text: 'Anak bisa berpakaian sendiri tanpa dibantu?' },
+  ],
+}

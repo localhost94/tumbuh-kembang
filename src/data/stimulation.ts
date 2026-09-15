@@ -1,0 +1,176 @@
+import type { AgeId } from './ageSegments'
+
+export interface StimulationGroup {
+  title: string
+  items: string[]
+}
+
+/**
+ * Stimulasi sesuai tahapan usia anak dari Buku KIA 2024.
+ */
+export const STIMULATION: Record<AgeId, StimulationGroup> = {
+  nb: {
+    title: 'Stimulasi bayi baru lahir (0–28 hari)',
+    items: [
+      'Kontak kulit ke kulit (metode kanguru) untuk kehangatan dan kedekatan.',
+      'Dekap hangat, tatap mata, dan ajak bayi bicara dengan lembut.',
+      'Susui dengan penuh kasih sayang dan responsif saat bayi menunjukkan tanda lapar.',
+      'Jaga suasana tenang dan nyaman; jauhkan dari suara bising berlebihan.',
+      'Ciptakan pola tidur aman: telentang, alas rata, kelambu.',
+    ],
+  },
+  m1_3: {
+    title: 'Stimulasi bayi 29 hari – 3 bulan',
+    items: [
+      'Peluk, cium, ayun bayi.',
+      'Senyum, tatap mata, ajak bicara.',
+      'Tirukan ocehan dan mimik bayi.',
+      'Interaksi langsung untuk mengenalkan berbagai suara, bunyi, atau nyanyian.',
+      'Gantung benda berwarna dan berbunyi.',
+      'Meraih, meraba, pegang mainan, angkat kepala.',
+      'Gulingkan kanan-kiri, tengkurap-telentang.',
+    ],
+  },
+  m3_6: {
+    title: 'Stimulasi bayi 3–6 bulan',
+    items: [
+      'Peluk, cium, pandang mata, senyum, bicara.',
+      'Mencari sumber suara.',
+      'Bermain cilukba, melihat wajah di cermin.',
+      'Memeluk, mengayun.',
+      'Melihat, meraih.',
+      'Mengamati benda kecil dan benda bergerak.',
+      'Mengambil benda kecil.',
+      'Berguling-guling, duduk.',
+    ],
+  },
+  m6_9: {
+    title: 'Stimulasi bayi 6–9 bulan',
+    items: [
+      'Peluk, senyum, bicara, panggil namanya.',
+      'Bersalaman, tepuk tangan, melambai ke orang lain.',
+      'Kenalkan/tunjuk nama orang (papa/mama) dan benda sekitar.',
+      'Cilukba, melihat cermin.',
+      'Tunjuk dan sebutkan nama gambar.',
+      'Bacakan dongeng.',
+      'Pegang mainan dengan 2 tangan.',
+      'Masukkan benda kecil ke dalam wadah.',
+      'Sembunyikan dan cari mainan.',
+      'Mainan yang mengapung di air.',
+      'Memukul-mukul.',
+      'Duduk, merangkak, berdiri berpegangan.',
+    ],
+  },
+  m9_12: {
+    title: 'Stimulasi bayi 9–12 bulan',
+    items: [
+      'Berbicara dengan boneka.',
+      'Menunjuk dan mengucapkan orang/benda/organ tubuh yang sudah dikenal.',
+      'Bacakan dongeng saat mengenalkan dan menyuruh menunjuk.',
+      'Pegang mainan dengan 2 tangan.',
+      'Memasukkan benda kecil ke dalam wadah.',
+      'Menyusun balok.',
+      'Sembunyikan dan cari mainan.',
+      'Memegang pensil dan mencoret-coret kertas.',
+      'Duduk, merangkak, berdiri berpegangan.',
+      'Berjalan mundur, jinjit.',
+    ],
+  },
+  m12_18: {
+    title: 'Stimulasi anak 12–18 bulan',
+    items: [
+      'Berjalan mundur, naik tangga.',
+      'Tangkap dan lempar bola.',
+      'Menyusun balok atau puzzle, menggambar.',
+      'Bermain air, meniup, menendang bola.',
+      'Bercerita tentang gambar di buku.',
+      'Menyebutkan nama benda, menyanyi.',
+      'Main telpon-telponan, menyatakan keinginan.',
+      'Bermain dengan teman sebaya, petak umpet.',
+      'Merapikan mainan, membuka baju.',
+      'Makan bersama.',
+      'Merangkai manik besar.',
+    ],
+  },
+  m18_24: {
+    title: 'Stimulasi anak 18–24 bulan',
+    items: [
+      'Bicara, bertanya, bercerita, bernyanyi.',
+      'Tanya jawab, main telpon-telponan.',
+      'Perintah sederhana, membantu pekerjaan.',
+      'Melepas baju, rapikan mainan.',
+      'Makan bersama dengan sendok garpu.',
+      'Menyusun balok, memasang puzzle, menggambar, membentuk lilin.',
+      'Buat rumah-rumahan, petak umpet.',
+      'Berjalan, berlari, melompat.',
+      'Berdiri satu kaki, naik turun tangga.',
+      'Melempar, menangkap, menendang bola.',
+    ],
+  },
+  y2_3: {
+    title: 'Stimulasi anak 2–3 tahun',
+    items: [
+      'Sebutkan nama benda, sifat, guna benda.',
+      'Bacakan cerita, tanya jawab.',
+      'Anak diminta bercerita pengalaman menonton TV didampingi maksimal 1 jam, menyanyi.',
+      'Cuci tangan, cebok, berpakaian, rapikan mainan.',
+      'Makan dengan sendok garpu.',
+      'Menyusun balok, memasang puzzle, menggambar, menempel.',
+      'Mengelompokkan benda sejenis.',
+      'Mencocokkan gambar dan benda.',
+      'Menghitung.',
+      'Melempar, menangkap.',
+      'Berlari, melompat, memanjat, merayap.',
+    ],
+  },
+  y3_4: {
+    title: 'Stimulasi anak 3–4 tahun',
+    items: [
+      'Menyebutkan nama benda, sifat, guna benda.',
+      'Bacakan cerita, tanya jawab.',
+      'Anak diminta bercerita pengalaman.',
+      'Menonton TV didampingi, menyanyi.',
+      'Cuci tangan, cebok, berpakaian, rapikan mainan.',
+      'Makan dengan sendok garpu.',
+      'Menyusun balok atau puzzle, menggambar, menempel.',
+      'Mengelompokkan benda sejenis.',
+      'Mencocokkan gambar dan benda.',
+      'Menghitung.',
+      'Melempar, menangkap.',
+      'Berlari, melompat, memanjat, merayap.',
+    ],
+  },
+  y4_5: {
+    title: 'Stimulasi anak 4–5 tahun',
+    items: [
+      'Bermain peran, anak diminta bercerita pengalaman.',
+      'Menggambar orang, mengenal huruf.',
+      'Main bola, lompat tali.',
+      'Latih untuk dapat mengikuti aturan permainan.',
+      'Kenalkan nama-nama hari.',
+      'Menyebut angka berurutan.',
+      'Mengajak anak sikat gigi bersama dan melatih sikat gigi sendiri.',
+      'Melatih memakai pakaian sendiri.',
+      'Menguatkan kepercayaan diri anak.',
+    ],
+  },
+  y5_6: {
+    title: 'Stimulasi anak 5–6 tahun',
+    items: [
+      'Mengenal nama dan fungsi benda-benda.',
+      'Bacakan buku, tanya jawab, bercerita.',
+      'Menonton TV didampingi maksimal 1 jam, menyanyi.',
+      'Cuci tangan, cebok, berpakaian, rapikan mainan.',
+      'Melempar, menangkap, berlari, melompat.',
+      'Makan dengan sendok garpu, masak-masakan.',
+      'Menggunting, menempel, menjahit.',
+      'Menyusun balok, memasang puzzle, menggambar, mewarna, menulis nama.',
+      'Mengingat, menghafal, mengerti aturan dan urutan.',
+      'Membandingkan besar kecil, banyak sedikit.',
+      'Menghitung, konsep satu dan setengah.',
+      'Mengenal angka, huruf, simbol, jam, hari dan tanggal.',
+      'Memanjat, merayap, sepeda roda 3, ayunan.',
+      'Bermain berjualan, bertukang, dan mengukur.',
+    ],
+  },
+}
