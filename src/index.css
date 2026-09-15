@@ -8,20 +8,8 @@
   --color-mint-50: #eefbf6;
   --color-mint-100: #d5f5e8;
 
-  --animate-float-slow: float 9s ease-in-out infinite;
-  --animate-float-slower: float 14s ease-in-out infinite;
-  --animate-rise: rise 0.5s ease-out both;
-  --animate-dash: dash 2.4s ease-out both;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-  }
-  50% {
-    transform: translateY(-18px) translateX(10px);
-  }
+  --animate-rise: rise 0.4s ease-out both;
+  --animate-dash: dash 2s ease-out both;
 }
 
 @keyframes rise {
@@ -100,4 +88,17 @@ input[type='range']::-moz-range-thumb {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

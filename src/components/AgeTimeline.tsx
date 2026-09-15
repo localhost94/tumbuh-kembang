@@ -4,7 +4,7 @@ export function AgeTimeline({ month, onChange }: { month: number; onChange: (m: 
   const active = segmentForMonth(month)
 
   return (
-    <div className="rounded-3xl border border-teal-100 bg-white/85 p-5 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)] backdrop-blur sm:p-6">
+    <div className="rounded-3xl border border-teal-100 bg-white/95 p-5 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)] sm:p-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
           <p className="text-xs font-bold tracking-wide text-teal-600 uppercase">Usia anak</p>

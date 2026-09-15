@@ -29,7 +29,7 @@ export default function App() {
     <div className="min-h-screen">
       <GeoBackdrop />
 
-      <header className="sticky top-0 z-40 border-b border-teal-100/70 bg-white/80 backdrop-blur-md">
+      <header className="sticky top-0 z-40 border-b border-teal-100/70 bg-white/95">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
           <a href="#top" className="flex items-center gap-2.5">
             <span className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-500 text-white">
@@ -195,7 +195,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 function HeroVisual() {
   return (
     <div className="relative">
-      <div className="rounded-[2rem] border border-teal-100 bg-white/85 p-6 shadow-[0_30px_70px_-40px_rgba(13,148,136,0.6)] backdrop-blur">
+      <div className="rounded-[2rem] border border-teal-100 bg-white/95 p-6 shadow-[0_30px_70px_-40px_rgba(13,148,136,0.6)]">
         <svg viewBox="0 0 360 300" className="h-auto w-full">
           <defs>
             <linearGradient id="barGrad" x1="0" y1="0" x2="0" y2="1">
@@ -275,7 +275,7 @@ function HeroVisual() {
 
 function Card({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="rounded-3xl border border-teal-100/80 bg-white/85 p-6 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)] backdrop-blur">
+    <div className="rounded-3xl border border-teal-100/80 bg-white/95 p-6 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)]">
       <div className="mb-4 flex items-center gap-3">
         <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-rose-100 text-rose-600">
           <IconAlert />
@@ -304,7 +304,7 @@ function Card({ title, items }: { title: string; items: string[] }) {
 
 function Footer() {
   return (
-    <footer className="mt-8 border-t border-teal-100 bg-white/70 backdrop-blur">
+    <footer className="mt-8 border-t border-teal-100 bg-white/90">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr]">
         <div>
           <div className="flex items-center gap-2.5">

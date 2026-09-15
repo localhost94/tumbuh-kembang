@@ -9,9 +9,9 @@ export function GeoBackdrop() {
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#dots)" opacity="0.35" />
-        <circle cx="88%" cy="8%" r="170" fill="#a7f3d0" opacity="0.35" className="animate-float-slow" />
-        <circle cx="6%" cy="34%" r="120" fill="#fde68a" opacity="0.3" className="animate-float-slower" />
-        <circle cx="72%" cy="72%" r="140" fill="#99f6e4" opacity="0.28" className="animate-float-slow" />
+        <circle cx="88%" cy="8%" r="170" fill="#a7f3d0" opacity="0.35" />
+        <circle cx="6%" cy="34%" r="120" fill="#fde68a" opacity="0.3" />
+        <circle cx="72%" cy="72%" r="140" fill="#99f6e4" opacity="0.28" />
         <path
           d="M-40 520 C 220 430, 340 640, 640 540 S 1080 360, 1480 470"
           fill="none"
