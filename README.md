@@ -2,6 +2,7 @@
 
 Website visual interaktif untuk memantau tumbuh kembang anak usia **0–6 tahun**, berdasarkan **Buku Kesehatan Ibu dan Anak (Buku KIA) 2024** terbitan Kementerian Kesehatan Republik Indonesia.
 
+🌐 **Live:** [tumbuh.kusuma.dev](https://tumbuh.kusuma.dev)
 🔗 **Sumber data:** [Buku KIA 2024 — Kementerian Kesehatan RI (PDF)](https://kesprimkom.kemkes.go.id/assets/uploads/contents/others/Buku_KIA_2024.pdf)
 
 > Tanpa login. Tanpa backend. Semua konten dan perhitungan berjalan di browser.
