@@ -88,12 +88,12 @@ export function GrowthChecker() {
     <div className="grid gap-6 lg:grid-cols-[minmax(0,390px)_1fr]">
       <Card>
         <div className="mb-5 flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-teal-100 text-teal-700">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-kia-100 text-kia-700">
             <IconChart />
           </span>
           <div>
-            <h3 className="text-base font-bold text-teal-950">Cek pertumbuhan anak</h3>
-            <p className="text-sm text-teal-900/70">Usia dihitung otomatis dari bulan & tahun lahir. Untuk 0–5 tahun.</p>
+            <h3 className="text-base font-bold text-kia-950">Cek pertumbuhan anak</h3>
+            <p className="text-sm text-kia-900/70">Usia dihitung otomatis dari bulan & tahun lahir. Untuk 0–5 tahun.</p>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ export function GrowthChecker() {
                   type="button"
                   onClick={() => setSex(s)}
                   className={`rounded-xl px-3 py-2.5 text-sm font-semibold transition ${
-                    sex === s ? 'bg-teal-600 text-white shadow-md shadow-teal-600/25' : 'bg-teal-50 text-teal-700 hover:bg-teal-100'
+                    sex === s ? 'bg-kia-600 text-white shadow-md shadow-kia-600/25' : 'bg-kia-50 text-kia-700 hover:bg-kia-100'
                   }`}
                 >
                   {s === 'L' ? 'Laki-laki' : 'Perempuan'}
@@ -124,12 +124,12 @@ export function GrowthChecker() {
             </Field>
           </div>
 
-          <div className={`rounded-2xl px-3.5 py-3 ring-1 ${ageValid ? 'bg-teal-50/70 ring-teal-100' : 'bg-amber-50 ring-amber-100'}`}>
-            <span className="text-xs font-bold tracking-wide text-teal-600 uppercase">Usia anak saat ini</span>
+          <div className={`rounded-2xl px-3.5 py-3 ring-1 ${ageValid ? 'bg-kia-50/70 ring-kia-100' : 'bg-amber-50 ring-amber-100'}`}>
+            <span className="text-xs font-bold tracking-wide text-kia-600 uppercase">Usia anak saat ini</span>
             {ageValid ? (
-              <p className="mt-0.5 text-lg font-extrabold text-teal-900">
+              <p className="mt-0.5 text-lg font-extrabold text-kia-900">
                 {ageYears} tahun {ageRest} bulan
-                <span className="ml-2 text-xs font-semibold text-teal-600">= {monthNum} bulan</span>
+                <span className="ml-2 text-xs font-semibold text-kia-600">= {monthNum} bulan</span>
               </p>
             ) : (
               <p className="mt-0.5 text-sm font-semibold text-amber-800">
@@ -147,7 +147,7 @@ export function GrowthChecker() {
                 placeholder="mis. 7,5"
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
-                className="w-full rounded-xl border border-teal-100 bg-white px-3 py-2.5 text-sm font-semibold text-teal-900 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                className="w-full rounded-xl border border-kia-100 bg-white px-3 py-2.5 text-sm font-semibold text-kia-900 outline-none focus:border-kia-400 focus:ring-2 focus:ring-kia-100"
               />
             </Field>
             <Field label={heightLabel}>
@@ -156,7 +156,7 @@ export function GrowthChecker() {
                 placeholder={isLength ? 'mis. 67,5' : 'mis. 96'}
                 value={lengthValue}
                 onChange={(e) => setLengthValue(e.target.value)}
-                className="w-full rounded-xl border border-teal-100 bg-white px-3 py-2.5 text-sm font-semibold text-teal-900 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+                className="w-full rounded-xl border border-kia-100 bg-white px-3 py-2.5 text-sm font-semibold text-kia-900 outline-none focus:border-kia-400 focus:ring-2 focus:ring-kia-100"
               />
             </Field>
           </div>
@@ -184,7 +184,7 @@ export function GrowthChecker() {
             </div>
           )}
 
-          <p className="text-xs leading-relaxed text-teal-900/60">
+          <p className="text-xs leading-relaxed text-kia-900/60">
             Alat ini bersifat edukatif dan bukan diagnosis. Z-score dihitung dengan Standar Antropometri Anak (WHO/Permenkes
             No. 2 Tahun 2020). Selalu ploting hasil ukur di KMS/Posyandu dan konsultasikan ke tenaga kesehatan.
           </p>
@@ -194,7 +194,7 @@ export function GrowthChecker() {
       <div className="space-y-5">
         <Card>
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <h3 className="text-base font-bold text-teal-950">Kurva pertumbuhan 0–60 bulan</h3>
+            <h3 className="text-base font-bold text-kia-950">Kurva pertumbuhan 0–60 bulan</h3>
             <div className="flex flex-wrap gap-2">
               {(
                 [
@@ -208,7 +208,7 @@ export function GrowthChecker() {
                   type="button"
                   onClick={() => setMetric(m)}
                   className={`rounded-full px-3.5 py-1.5 text-xs font-semibold transition ${
-                    metric === m ? 'bg-teal-600 text-white' : 'bg-teal-50 text-teal-700 hover:bg-teal-100'
+                    metric === m ? 'bg-kia-600 text-white' : 'bg-kia-50 text-kia-700 hover:bg-kia-100'
                   }`}
                 >
                   {label}
@@ -220,18 +220,18 @@ export function GrowthChecker() {
         </Card>
 
         <Card>
-          <h3 className="mb-1 text-base font-bold text-teal-950">Kategori status gizi</h3>
-          <p className="mb-3 text-xs text-teal-900/60">Permenkes No. 2 Tahun 2020 tentang Standar Antropometri Anak.</p>
+          <h3 className="mb-1 text-base font-bold text-kia-950">Kategori status gizi</h3>
+          <p className="mb-3 text-xs text-kia-900/60">Permenkes No. 2 Tahun 2020 tentang Standar Antropometri Anak.</p>
           <div className="grid gap-4 sm:grid-cols-2">
             {ANTHROPOMETRY_NOTES.map((n) => (
-              <div key={n.index} className="rounded-2xl border border-teal-100 p-4">
-                <p className="text-sm font-extrabold text-teal-900">{n.index}</p>
-                <p className="mb-2 text-xs text-teal-900/60">{n.label}</p>
+              <div key={n.index} className="rounded-2xl border border-kia-100 p-4">
+                <p className="text-sm font-extrabold text-kia-900">{n.index}</p>
+                <p className="mb-2 text-xs text-kia-900/60">{n.label}</p>
                 <ul className="space-y-1.5">
                   {n.bands.map((b) => (
                     <li key={b.range} className="flex items-center justify-between gap-2 text-xs">
-                      <span className="shrink-0 rounded-md bg-teal-50 px-1.5 py-0.5 font-semibold text-teal-700">{b.range}</span>
-                      <span className="text-right text-teal-900/75">{b.status}</span>
+                      <span className="shrink-0 rounded-md bg-kia-50 px-1.5 py-0.5 font-semibold text-kia-700">{b.range}</span>
+                      <span className="text-right text-kia-900/75">{b.status}</span>
                     </li>
                   ))}
                 </ul>
@@ -242,25 +242,25 @@ export function GrowthChecker() {
 
         <Card>
           <details>
-            <summary className="cursor-pointer text-sm font-bold text-teal-950">
+            <summary className="cursor-pointer text-sm font-bold text-kia-950">
               Tabel pertumbuhan Buku KIA 2024 (0–2 tahun)
             </summary>
-            <p className="mt-2 mb-3 text-xs leading-relaxed text-teal-900/60">
+            <p className="mt-2 mb-3 text-xs leading-relaxed text-kia-900/60">
               Rentang ideal berat dan panjang badan per bulan menurut Buku KIA 2024, sebagai pembanding tambahan untuk anak
               usia 0–2 tahun.
             </p>
             <div className="overflow-x-auto">
               <table className="w-full min-w-[420px] text-left text-xs">
                 <thead>
-                  <tr className="text-teal-700">
+                  <tr className="text-kia-700">
                     <th className="py-1.5 pr-3 font-bold">Umur (bln)</th>
                     <th className="py-1.5 pr-3 font-bold">Berat ideal (kg)</th>
                     <th className="py-1.5 pr-3 font-bold">Panjang ideal (cm)</th>
                   </tr>
                 </thead>
-                <tbody className="text-teal-900/80">
+                <tbody className="text-kia-900/80">
                   {GROWTH_TABLE[sex].map((r) => (
-                    <tr key={r.month} className="border-t border-teal-50">
+                    <tr key={r.month} className="border-t border-kia-50">
                       <td className="py-1.5 pr-3 font-semibold">{r.month}</td>
                       <td className="py-1.5 pr-3">
                         {r.weightMin.toFixed(1)}–{r.weightMax.toFixed(1)}
@@ -283,7 +283,7 @@ export function GrowthChecker() {
 function Field({ label, children }: { label: string; children: ReactNode }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-xs font-bold tracking-wide text-teal-600 uppercase">{label}</span>
+      <span className="mb-1.5 block text-xs font-bold tracking-wide text-kia-600 uppercase">{label}</span>
       {children}
     </label>
   )
@@ -303,7 +303,7 @@ function Select({
       <select
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full appearance-none rounded-xl border border-teal-100 bg-white px-3 py-2.5 pr-9 text-sm font-semibold text-teal-900 outline-none focus:border-teal-400 focus:ring-2 focus:ring-teal-100"
+        className="w-full appearance-none rounded-xl border border-kia-100 bg-white px-3 py-2.5 pr-9 text-sm font-semibold text-kia-900 outline-none focus:border-kia-400 focus:ring-2 focus:ring-kia-100"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>
@@ -311,7 +311,7 @@ function Select({
           </option>
         ))}
       </select>
-      <IconChevron className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-teal-400" />
+      <IconChevron className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-kia-400" />
     </div>
   )
 }
@@ -332,7 +332,7 @@ function ResultCard({ title, result, empty }: { title: string; result?: Category
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <span className={`h-2.5 w-2.5 rounded-full ${t.dot}`} />
-          <p className="text-sm font-bold text-teal-950">{title}</p>
+          <p className="text-sm font-bold text-kia-950">{title}</p>
         </div>
         <span className={`rounded-full bg-white/70 px-2 py-0.5 text-xs font-bold ${t.text}`}>
           Z {z >= 0 ? '+' : ''}

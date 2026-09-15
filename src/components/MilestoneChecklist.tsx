@@ -52,8 +52,8 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
   if (!milestones || milestones.length === 0) {
     return (
       <Card>
-        <h3 className="text-base font-bold text-teal-950">Penanda perkembangan</h3>
-        <p className="mt-2 text-sm leading-relaxed text-teal-900/70">
+        <h3 className="text-base font-bold text-kia-950">Penanda perkembangan</h3>
+        <p className="mt-2 text-sm leading-relaxed text-kia-900/70">
           Pada usia ini, pemantauan dilakukan melalui pemeriksaan langsung oleh tenaga kesehatan (0–6 jam, 6–48 jam, 3–7
           hari, dan 8–28 hari setelah lahir) serta lembar pemantauan harian. Kenali tanda bahaya dan segera periksa bila
           ditemukan.
@@ -68,8 +68,8 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
         <div className="flex items-center gap-5">
           <ProgressRing value={stats.ya} total={stats.total} />
           <div>
-            <h3 className="text-base font-bold text-teal-950">Penanda perkembangan</h3>
-            <p className="mt-1 max-w-md text-sm leading-relaxed text-teal-900/70">
+            <h3 className="text-base font-bold text-kia-950">Penanda perkembangan</h3>
+            <p className="mt-1 max-w-md text-sm leading-relaxed text-kia-900/70">
               Beri tanda sesuai kemampuan anak. Jika anak belum bisa melakukan salah satu hal berikut, segera bawa ke
               Puskesmas.
             </p>
@@ -77,7 +77,7 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
               <span className="rounded-full bg-emerald-50 px-3 py-1 text-emerald-700 ring-1 ring-emerald-100">
                 Bisa: {stats.ya}
               </span>
-              <span className="rounded-full bg-rose-50 px-3 py-1 text-rose-700 ring-1 ring-rose-100">
+              <span className="rounded-full bg-red-50 px-3 py-1 text-red-700 ring-1 ring-red-100">
                 Belum: {stats.tidak}
               </span>
               <span className="rounded-full bg-slate-50 px-3 py-1 text-slate-600 ring-1 ring-slate-100">
@@ -89,7 +89,7 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
         <button
           type="button"
           onClick={reset}
-          className="inline-flex items-center gap-2 self-start rounded-full bg-teal-50 px-3.5 py-2 text-xs font-semibold text-teal-700 transition hover:bg-teal-100"
+          className="inline-flex items-center gap-2 self-start rounded-full bg-kia-50 px-3.5 py-2 text-xs font-semibold text-kia-700 transition hover:bg-kia-100"
         >
           <IconRefresh className="h-4 w-4" /> Reset
         </button>
@@ -105,14 +105,14 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
                 answer === 'ya'
                   ? 'border-emerald-100 bg-emerald-50/60'
                   : answer === 'tidak'
-                    ? 'border-rose-100 bg-rose-50/60'
+                    ? 'border-red-100 bg-red-50/60'
                     : 'border-slate-100 bg-white'
               }`}
             >
-              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-teal-600/10 text-xs font-bold text-teal-700">
+              <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-kia-600/10 text-xs font-bold text-kia-700">
                 {i + 1}
               </span>
-              <p className="flex-1 text-sm leading-relaxed text-teal-900/85">{m.text}</p>
+              <p className="flex-1 text-sm leading-relaxed text-kia-900/85">{m.text}</p>
               <div className="flex shrink-0 gap-1.5">
                 <button
                   type="button"
@@ -132,8 +132,8 @@ export function MilestoneChecklist({ segment }: { segment: AgeSegment }) {
                   aria-label="Belum bisa"
                   className={`flex h-8 w-8 items-center justify-center rounded-xl transition ${
                     answer === 'tidak'
-                      ? 'bg-rose-500 text-white'
-                      : 'bg-white text-rose-500 ring-1 ring-rose-200 hover:bg-rose-50'
+                      ? 'bg-red-500 text-white'
+                      : 'bg-white text-red-500 ring-1 ring-red-200 hover:bg-red-50'
                   }`}
                 >
                   <IconClose className="h-4 w-4" />

@@ -12,8 +12,8 @@ export function StimulationGrid({ segment }: { segment: AgeSegment }) {
           <IconBlocks />
         </span>
         <div>
-          <h3 className="text-base font-bold text-teal-950">Ide stimulasi</h3>
-          <p className="text-sm text-teal-900/70">{group.title}</p>
+          <h3 className="text-base font-bold text-kia-950">Ide stimulasi</h3>
+          <p className="text-sm text-kia-900/70">{group.title}</p>
         </div>
       </div>
       <p className="mb-5 rounded-2xl bg-violet-50 px-4 py-3 text-sm leading-relaxed text-violet-900/80">
@@ -28,7 +28,7 @@ export function StimulationGrid({ segment }: { segment: AgeSegment }) {
             <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-violet-100 text-xs font-bold text-violet-700 transition group-hover:bg-violet-600 group-hover:text-white">
               {i + 1}
             </span>
-            <span className="text-sm leading-relaxed text-teal-900/85">{item}</span>
+            <span className="text-sm leading-relaxed text-kia-900/85">{item}</span>
           </li>
         ))}
       </ul>

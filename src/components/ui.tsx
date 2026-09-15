@@ -19,12 +19,12 @@ export function Section({
     <section id={id} className={`mx-auto w-full max-w-6xl scroll-mt-24 px-4 py-12 sm:px-6 ${className}`}>
       <div className="mb-8 max-w-3xl">
         {eyebrow && (
-          <span className="mb-3 inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-bold tracking-wide text-teal-700 uppercase">
+          <span className="mb-3 inline-flex items-center rounded-full bg-kia-100 px-3 py-1 text-xs font-bold tracking-wide text-kia-700 uppercase">
             {eyebrow}
           </span>
         )}
-        <h2 className="text-2xl font-extrabold tracking-tight text-teal-950 sm:text-3xl">{title}</h2>
-        {description && <p className="mt-3 text-sm leading-relaxed text-teal-900/70 sm:text-base">{description}</p>}
+        <h2 className="text-2xl font-extrabold tracking-tight text-kia-950 sm:text-3xl">{title}</h2>
+        {description && <p className="mt-3 text-sm leading-relaxed text-kia-900/70 sm:text-base">{description}</p>}
       </div>
       {children}
     </section>
@@ -34,18 +34,18 @@ export function Section({
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`rounded-3xl border border-teal-100/80 bg-white/95 p-6 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)] ${className}`}
+      className={`rounded-3xl border border-kia-100/80 bg-white/95 p-6 shadow-[0_10px_40px_-24px_rgba(219,39,119,0.45)] ${className}`}
     >
       {children}
     </div>
   )
 }
 
-export function Pill({ children, tone = 'teal' }: { children: ReactNode; tone?: 'teal' | 'amber' | 'rose' | 'slate' }) {
+export function Pill({ children, tone = 'kia' }: { children: ReactNode; tone?: 'kia' | 'amber' | 'red' | 'slate' }) {
   const tones: Record<string, string> = {
-    teal: 'bg-teal-50 text-teal-700 ring-teal-100',
+    kia: 'bg-kia-50 text-kia-700 ring-kia-100',
     amber: 'bg-amber-50 text-amber-700 ring-amber-100',
-    rose: 'bg-rose-50 text-rose-700 ring-rose-100',
+    red: 'bg-red-50 text-red-700 ring-red-100',
     slate: 'bg-slate-50 text-slate-600 ring-slate-100',
   }
   return (
@@ -71,13 +71,13 @@ export function ProgressRing({
   const c = 2 * Math.PI * r
   return (
     <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className="shrink-0">
-      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#e6f7f1" strokeWidth={stroke} />
+      <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#fce7f3" strokeWidth={stroke} />
       <circle
         cx={size / 2}
         cy={size / 2}
         r={r}
         fill="none"
-        stroke="#0d9488"
+        stroke="#db2777"
         strokeWidth={stroke}
         strokeLinecap="round"
         strokeDasharray={c}
@@ -90,7 +90,7 @@ export function ProgressRing({
         y="47%"
         textAnchor="middle"
         dominantBaseline="middle"
-        className="fill-teal-900 font-extrabold"
+        className="fill-kia-900 font-extrabold"
         style={{ fontSize: size * 0.26 }}
       >
         {value}
@@ -100,7 +100,7 @@ export function ProgressRing({
         y="68%"
         textAnchor="middle"
         dominantBaseline="middle"
-        className="fill-teal-500 font-semibold"
+        className="fill-kia-500 font-semibold"
         style={{ fontSize: size * 0.13 }}
       >
         / {total}

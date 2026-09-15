@@ -4,13 +4,13 @@ export function AgeTimeline({ month, onChange }: { month: number; onChange: (m: 
   const active = segmentForMonth(month)
 
   return (
-    <div className="rounded-3xl border border-teal-100 bg-white/95 p-5 shadow-[0_10px_40px_-24px_rgba(13,148,136,0.45)] sm:p-6">
+    <div className="rounded-3xl border border-kia-100 bg-white/95 p-5 shadow-[0_10px_40px_-24px_rgba(219,39,119,0.45)] sm:p-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-bold tracking-wide text-teal-600 uppercase">Usia anak</p>
-          <p className="text-3xl font-extrabold text-teal-950">{ageText(month)}</p>
+          <p className="text-xs font-bold tracking-wide text-kia-600 uppercase">Usia anak</p>
+          <p className="text-3xl font-extrabold text-kia-950">{ageText(month)}</p>
         </div>
-        <p className="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700 ring-1 ring-teal-100">
+        <p className="rounded-full bg-kia-50 px-3 py-1 text-xs font-semibold text-kia-700 ring-1 ring-kia-100">
           {active.label}
         </p>
       </div>
@@ -26,7 +26,7 @@ export function AgeTimeline({ month, onChange }: { month: number; onChange: (m: 
           aria-label="Pilih usia anak dalam bulan"
           className="h-4 w-full cursor-pointer"
         />
-        <div className="mt-2 flex justify-between text-[10px] font-semibold text-teal-500">
+        <div className="mt-2 flex justify-between text-[10px] font-semibold text-kia-500">
           <span>0 bln</span>
           <span>6</span>
           <span>12</span>
@@ -48,8 +48,8 @@ export function AgeTimeline({ month, onChange }: { month: number; onChange: (m: 
               onClick={() => onChange(s.minMonth)}
               className={`shrink-0 rounded-full px-3.5 py-2 text-xs font-semibold whitespace-nowrap transition ${
                 isActive
-                  ? 'bg-teal-600 text-white shadow-md shadow-teal-600/25'
-                  : 'bg-teal-50 text-teal-700 hover:bg-teal-100'
+                  ? 'bg-kia-600 text-white shadow-md shadow-kia-600/25'
+                  : 'bg-kia-50 text-kia-700 hover:bg-kia-100'
               }`}
             >
               {s.short}

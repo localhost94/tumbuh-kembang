@@ -34,8 +34,8 @@ export function NutritionPanel({ month }: { month: number }) {
           <IconDrop />
         </span>
         <div>
-          <h3 className="text-base font-bold text-teal-950">Gizi & MPASI</h3>
-          <p className="text-sm text-teal-900/70">Porsi, tekstur, dan frekuensi makan sesuai usia anak.</p>
+          <h3 className="text-base font-bold text-kia-950">Gizi & MPASI</h3>
+          <p className="text-sm text-kia-900/70">Porsi, tekstur, dan frekuensi makan sesuai usia anak.</p>
         </div>
       </div>
 
@@ -70,7 +70,7 @@ export function NutritionPanel({ month }: { month: number }) {
       {stage && (
         <div className="animate-rise">
           <div className="mb-4 flex flex-wrap items-center gap-2">
-            <h4 className="text-lg font-extrabold text-teal-950">{stage.label}</h4>
+            <h4 className="text-lg font-extrabold text-kia-950">{stage.label}</h4>
             <Pill tone="amber">{stage.ageRange}</Pill>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +83,7 @@ export function NutritionPanel({ month }: { month: number }) {
               <p className="mb-2 text-xs font-bold tracking-wide text-orange-700 uppercase">Catatan</p>
               <ul className="space-y-2">
                 {stage.notes.map((n) => (
-                  <li key={n} className="flex gap-2 text-sm leading-relaxed text-teal-900/85">
+                  <li key={n} className="flex gap-2 text-sm leading-relaxed text-kia-900/85">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-400" />
                     {n}
                   </li>
@@ -99,14 +99,14 @@ export function NutritionPanel({ month }: { month: number }) {
           {OLDER_CHILD_NUTRITION.map((g) => (
             <div key={g.ageLabel}>
               <div className="mb-4 flex flex-wrap items-center gap-2">
-                <h4 className="text-lg font-extrabold text-teal-950">Pemenuhan gizi {g.ageLabel}</h4>
+                <h4 className="text-lg font-extrabold text-kia-950">Pemenuhan gizi {g.ageLabel}</h4>
                 <Pill tone="amber">Makanan keluarga</Pill>
               </div>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {g.items.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-2.5 rounded-2xl bg-orange-50/70 p-3.5 text-sm leading-relaxed text-teal-900/85 ring-1 ring-orange-100"
+                    className="flex gap-2.5 rounded-2xl bg-orange-50/70 p-3.5 text-sm leading-relaxed text-kia-900/85 ring-1 ring-orange-100"
                   >
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-orange-400" />
                     {item}
@@ -119,30 +119,30 @@ export function NutritionPanel({ month }: { month: number }) {
       )}
 
       <div className="mt-6 grid gap-5 lg:grid-cols-2">
-        <div className="rounded-2xl border border-teal-100 p-4">
+        <div className="rounded-2xl border border-kia-100 p-4">
           <div className="mb-3 flex items-center gap-2">
-            <IconSpark className="h-5 w-5 text-teal-600" />
-            <h4 className="text-sm font-bold text-teal-950">Syarat MPASI yang baik</h4>
+            <IconSpark className="h-5 w-5 text-kia-600" />
+            <h4 className="text-sm font-bold text-kia-950">Syarat MPASI yang baik</h4>
           </div>
           <ol className="space-y-2.5">
             {MPASI_PRINCIPLES.map((p) => (
-              <li key={p.title} className="text-sm leading-relaxed text-teal-900/80">
-                <span className="font-semibold text-teal-800">{p.title}</span> — {p.detail}
+              <li key={p.title} className="text-sm leading-relaxed text-kia-900/80">
+                <span className="font-semibold text-kia-800">{p.title}</span> — {p.detail}
               </li>
             ))}
           </ol>
         </div>
-        <div className="rounded-2xl border border-teal-100 p-4">
+        <div className="rounded-2xl border border-kia-100 p-4">
           <div className="mb-3 flex items-center gap-2">
-            <IconTooth className="h-5 w-5 text-teal-600" />
-            <h4 className="text-sm font-bold text-teal-950">Suplementasi rutin</h4>
+            <IconTooth className="h-5 w-5 text-kia-600" />
+            <h4 className="text-sm font-bold text-kia-950">Suplementasi rutin</h4>
           </div>
           <ul className="space-y-3">
             {SUPPLEMENTS.map((s) => (
-              <li key={s.label} className="rounded-xl bg-teal-50/70 p-3 text-sm leading-relaxed ring-1 ring-teal-100">
-                <span className="font-semibold text-teal-800">{s.label}</span>
-                <span className="ml-1 text-teal-600">({s.age})</span>
-                <p className="text-teal-900/75">{s.detail}</p>
+              <li key={s.label} className="rounded-xl bg-kia-50/70 p-3 text-sm leading-relaxed ring-1 ring-kia-100">
+                <span className="font-semibold text-kia-800">{s.label}</span>
+                <span className="ml-1 text-kia-600">({s.age})</span>
+                <p className="text-kia-900/75">{s.detail}</p>
               </li>
             ))}
           </ul>
@@ -154,9 +154,9 @@ export function NutritionPanel({ month }: { month: number }) {
 
 function InfoTile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-2xl border border-teal-100 bg-white p-4">
-      <p className="text-xs font-bold tracking-wide text-teal-600 uppercase">{label}</p>
-      <p className="mt-1.5 text-sm leading-relaxed font-medium text-teal-900/85">{value}</p>
+    <div className="rounded-2xl border border-kia-100 bg-white p-4">
+      <p className="text-xs font-bold tracking-wide text-kia-600 uppercase">{label}</p>
+      <p className="mt-1.5 text-sm leading-relaxed font-medium text-kia-900/85">{value}</p>
     </div>
   )
 }

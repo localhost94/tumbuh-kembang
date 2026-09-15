@@ -71,17 +71,17 @@ export function GrowthChart({
   const lines = [
     { z: -3, color: '#fca5a5', width: 2 },
     { z: -2, color: '#f59e0b', width: 2 },
-    { z: 0, color: '#0d9488', width: 3 },
+    { z: 0, color: '#db2777', width: 3 },
     { z: 2, color: '#34d399', width: 2 },
     { z: 3, color: '#a7f3d0', width: 2 },
   ]
 
   return (
     <div className="w-full">
-      <div className="mb-1 text-sm font-bold text-teal-900">{meta.title}</div>
+      <div className="mb-1 text-sm font-bold text-kia-900">{meta.title}</div>
       <div className="mb-3 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs font-semibold">
-        <span className="inline-flex items-center gap-1.5 text-teal-700">
-          <span className="h-0.5 w-4 rounded bg-teal-600" /> Median (0 SD)
+        <span className="inline-flex items-center gap-1.5 text-kia-700">
+          <span className="h-0.5 w-4 rounded bg-kia-600" /> Median (0 SD)
         </span>
         <span className="inline-flex items-center gap-1.5 text-amber-600">
           <span className="h-0.5 w-4 rounded bg-amber-500" /> -2 SD
@@ -90,7 +90,7 @@ export function GrowthChart({
           <span className="h-0.5 w-4 rounded bg-emerald-400" /> +2 SD
         </span>
         <span className="inline-flex items-center gap-1.5 text-slate-500">
-          <span className="h-3 w-3 rounded-sm bg-teal-500/15" /> Rentang normal (-2 s.d. +2 SD)
+          <span className="h-3 w-3 rounded-sm bg-kia-500/15" /> Rentang normal (-2 s.d. +2 SD)
         </span>
         {point && (
           <span className="inline-flex items-center gap-1.5 text-orange-600">
@@ -107,20 +107,20 @@ export function GrowthChart({
       >
         {gridValues.map((v) => (
           <g key={v}>
-            <line x1={PAD_L} x2={W - PAD_R} y1={yFor(v)} y2={yFor(v)} stroke="#e2f4ee" strokeWidth="1" />
-            <text x={PAD_L - 10} y={yFor(v)} textAnchor="end" dominantBaseline="middle" className="fill-teal-500" style={{ fontSize: 11 }}>
+            <line x1={PAD_L} x2={W - PAD_R} y1={yFor(v)} y2={yFor(v)} stroke="#fce7f3" strokeWidth="1" />
+            <text x={PAD_L - 10} y={yFor(v)} textAnchor="end" dominantBaseline="middle" className="fill-kia-500" style={{ fontSize: 11 }}>
               {v.toFixed(v >= 100 ? 0 : 1)}
             </text>
           </g>
         ))}
 
         {[0, 6, 12, 18, 24, 30, 36, 42, 48, 54, 60].map((m) => (
-          <text key={m} x={xFor(m)} y={H - PAD_B + 22} textAnchor="middle" className="fill-teal-500" style={{ fontSize: 11 }}>
+          <text key={m} x={xFor(m)} y={H - PAD_B + 22} textAnchor="middle" className="fill-kia-500" style={{ fontSize: 11 }}>
             {m}
           </text>
         ))}
 
-        <path d={bandPath} fill="#0d9488" opacity="0.1" />
+        <path d={bandPath} fill="#db2777" opacity="0.1" />
 
         {lines.map((l, i) => (
           <path
@@ -134,10 +134,10 @@ export function GrowthChart({
           />
         ))}
 
-        <text x={PAD_L} y={PAD_T - 12} className="fill-teal-600" style={{ fontSize: 12, fontWeight: 700 }}>
+        <text x={PAD_L} y={PAD_T - 12} className="fill-kia-600" style={{ fontSize: 12, fontWeight: 700 }}>
           {sex === 'L' ? 'Laki-laki' : 'Perempuan'}
         </text>
-        <text x={W - PAD_R} y={H - 8} textAnchor="end" className="fill-teal-400" style={{ fontSize: 11 }}>
+        <text x={W - PAD_R} y={H - 8} textAnchor="end" className="fill-kia-400" style={{ fontSize: 11 }}>
           Umur (bulan) · {meta.axis}
         </text>
 
@@ -161,7 +161,7 @@ export function GrowthChart({
             <text x="12" y="42" className="fill-amber-300" style={{ fontSize: 11 }}>
               -2 SD: {ref(-2, hoverMonth)} {meta.unit}
             </text>
-            <text x="12" y="58" className="fill-teal-200" style={{ fontSize: 11 }}>
+            <text x="12" y="58" className="fill-kia-200" style={{ fontSize: 11 }}>
               Median: {ref(0, hoverMonth)} {meta.unit}
             </text>
             <text x="12" y="74" className="fill-emerald-300" style={{ fontSize: 11 }}>
