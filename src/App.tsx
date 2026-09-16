@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { GeoBackdrop } from './components/GeoBackdrop'
-import { AgeTimeline } from './components/AgeTimeline'
+import { AgeBar, AgeTimeline } from './components/AgeTimeline'
 import { SummaryCards } from './components/SummaryCards'
 import { MilestoneChecklist } from './components/MilestoneChecklist'
 import { StimulationGrid } from './components/StimulationGrid'
@@ -91,6 +91,14 @@ export default function App() {
             )}
           </div>
         </div>
+
+        {mode === 'web' && (
+          <div className="border-t border-kia-100/70">
+            <div className="mx-auto max-w-6xl px-4 py-2.5 sm:px-6">
+              <AgeBar month={month} onChange={setMonth} />
+            </div>
+          </div>
+        )}
       </header>
 
       <main id="top">
@@ -160,23 +168,23 @@ function WebView({ month, onChangeMonth }: { month: number; onChangeMonth: (m: n
         id="pertumbuhan"
         eyebrow="Alat interaktif"
         title="Cek pertumbuhan & lihat kurva ideal"
-        description="Pilih jenis kelamin serta bulan dan tahun lahir anak — usianya dihitung otomatis. Masukkan berat dan panjang/tinggi badan untuk melihat z-score dan status gizi menurut Standar Antropometri Anak (WHO/Permenkes No. 2 Tahun 2020) untuk usia 0–5 tahun."
+        description="Usia mengikuti slider usia di atas halaman. Masukkan jenis kelamin, berat, dan panjang/tinggi badan untuk melihat z-score dan status gizi menurut Standar Antropometri Anak (WHO/Permenkes No. 2 Tahun 2020) untuk usia 0–5 tahun."
       >
-        <GrowthChecker />
+        <GrowthChecker month={month} />
       </Section>
 
       <Section
         id="imunisasi"
         eyebrow="Lindungi anak"
         title="Linimasa imunisasi"
-        description="Sesuaikan dengan usia anak pada slider di atas untuk melihat vaksin yang perlu diperhatikan. Jadwal mengikuti Buku KIA 2024 halaman 124–125."
+        description="Mengikuti usia anak pada slider di atas halaman untuk melihat vaksin yang perlu diperhatikan. Jadwal mengikuti Buku KIA 2024 halaman 124–125."
       >
         <div className="mb-5 flex flex-wrap items-center gap-3">
           <span className="inline-flex items-center gap-2 rounded-full bg-fuchsia-50 px-3.5 py-2 text-sm font-semibold text-fuchsia-800 ring-1 ring-fuchsia-100">
             <IconSyringe className="h-4 w-4" /> Usia terpilih: {month} bulan
           </span>
-          <a href="#usia" className="text-sm font-semibold text-kia-700 underline decoration-kia-300 underline-offset-4">
-            Ubah usia di bagian Per Usia
+          <a href="#top" className="text-sm font-semibold text-kia-700 underline decoration-kia-300 underline-offset-4">
+            Ubah lewat slider usia di atas
           </a>
         </div>
         <ImmunizationTimeline month={month} />

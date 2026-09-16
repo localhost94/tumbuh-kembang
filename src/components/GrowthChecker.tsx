@@ -4,7 +4,7 @@ import { MAX_MONTH, type Indicator } from '../data/whoGrowth'
 import { TONE_STYLES, bmiValue, classify, type CategoryResult } from '../lib/growthStatus'
 import { GrowthChart } from './GrowthChart'
 import { Card } from './ui'
-import { IconChart, IconChevron } from './Icons'
+import { IconChart } from './Icons'
 
 function parseNum(v: string): number | null {
   if (!v.trim()) return null
@@ -12,46 +12,16 @@ function parseNum(v: string): number | null {
   return Number.isFinite(n) ? n : null
 }
 
-const MONTH_NAMES = [
-  'Januari',
-  'Februari',
-  'Maret',
-  'April',
-  'Mei',
-  'Juni',
-  'Juli',
-  'Agustus',
-  'September',
-  'Oktober',
-  'November',
-  'Desember',
-]
-
-const NOW = new Date()
-const CURRENT_YEAR = NOW.getFullYear()
-const CURRENT_MONTH = NOW.getMonth()
-const BIRTH_YEARS = Array.from({ length: 8 }, (_, i) => CURRENT_YEAR - i)
-
-function defaultBirth() {
-  const d = new Date(CURRENT_YEAR, CURRENT_MONTH - 6, 1)
-  return { month: d.getMonth(), year: d.getFullYear() }
-}
-
 type Metric = Indicator
 
-export function GrowthChecker() {
-  const initial = defaultBirth()
+export function GrowthChecker({ month }: { month: number }) {
   const [sex, setSex] = useState<Sex>('L')
-  const [birthMonth, setBirthMonth] = useState(initial.month)
-  const [birthYear, setBirthYear] = useState(initial.year)
   const [weight, setWeight] = useState('')
   const [lengthValue, setLengthValue] = useState('')
   const [metric, setMetric] = useState<Metric>('wfa')
 
-  const ageMonths = (CURRENT_YEAR - birthYear) * 12 + (CURRENT_MONTH - birthMonth)
-  const ageValid = ageMonths >= 0 && ageMonths <= 72
-  const supported = ageValid && ageMonths <= MAX_MONTH
-  const monthNum = Math.max(0, ageMonths)
+  const monthNum = Math.max(0, Math.min(71, Math.floor(month)))
+  const supported = monthNum <= MAX_MONTH
   const ageYears = Math.floor(monthNum / 12)
   const ageRest = monthNum % 12
 
@@ -81,9 +51,6 @@ export function GrowthChecker() {
         }
       : null
 
-  const monthOptions = MONTH_NAMES.map((label, i) => ({ value: i, label }))
-  const yearOptions = BIRTH_YEARS.map((y) => ({ value: y, label: String(y) }))
-
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,390px)_1fr]">
       <Card>
@@ -93,7 +60,7 @@ export function GrowthChecker() {
           </span>
           <div>
             <h3 className="text-base font-bold text-kia-950">Cek pertumbuhan anak</h3>
-            <p className="text-sm text-kia-900/70">Usia dihitung otomatis dari bulan & tahun lahir. Untuk 0–5 tahun.</p>
+            <p className="text-sm text-kia-900/70">Usia mengikuti slider di atas halaman. Untuk 0–5 tahun.</p>
           </div>
         </div>
 
@@ -115,29 +82,15 @@ export function GrowthChecker() {
             </div>
           </Field>
 
-          <div className="grid grid-cols-2 gap-3">
-            <Field label="Bulan lahir">
-              <Select value={birthMonth} onChange={setBirthMonth} options={monthOptions} />
-            </Field>
-            <Field label="Tahun lahir">
-              <Select value={birthYear} onChange={setBirthYear} options={yearOptions} />
-            </Field>
-          </div>
-
-          <div className={`rounded-2xl px-3.5 py-3 ring-1 ${ageValid ? 'bg-kia-50/70 ring-kia-100' : 'bg-amber-50 ring-amber-100'}`}>
+          <div className="rounded-2xl bg-kia-50/70 px-3.5 py-3 ring-1 ring-kia-100">
             <span className="text-xs font-bold tracking-wide text-kia-600 uppercase">Usia anak saat ini</span>
-            {ageValid ? (
-              <p className="mt-0.5 text-lg font-extrabold text-kia-900">
-                {ageYears} tahun {ageRest} bulan
-                <span className="ml-2 text-xs font-semibold text-kia-600">= {monthNum} bulan</span>
-              </p>
-            ) : (
-              <p className="mt-0.5 text-sm font-semibold text-amber-800">
-                {ageMonths < 0
-                  ? 'Tanggal lahir di masa depan. Periksa kembali bulan & tahun lahir.'
-                  : 'Usia di luar cakupan panduan (0–6 tahun).'}
-              </p>
-            )}
+            <p className="mt-0.5 text-lg font-extrabold text-kia-900">
+              {ageYears} tahun {ageRest} bulan
+              <span className="ml-2 text-xs font-semibold text-kia-600">= {monthNum} bulan</span>
+            </p>
+            <a href="#top" className="mt-0.5 inline-block text-xs font-semibold text-kia-700 underline decoration-kia-300 underline-offset-4">
+              Ubah lewat slider usia di atas
+            </a>
           </div>
 
           <div className="grid grid-cols-2 gap-3">
@@ -161,7 +114,7 @@ export function GrowthChecker() {
             </Field>
           </div>
 
-          {!supported && ageValid && (
+          {!supported && (
             <p className="rounded-2xl bg-amber-50 px-3.5 py-3 text-xs leading-relaxed font-medium text-amber-800 ring-1 ring-amber-100">
               Standar antropometri pada panduan ini berlaku untuk usia 0–5 tahun (0–60 bulan). Untuk usia di atas 5 tahun,
               gunakan acuan 5–19 tahun dan konsultasikan ke tenaga kesehatan.
@@ -286,33 +239,6 @@ function Field({ label, children }: { label: string; children: ReactNode }) {
       <span className="mb-1.5 block text-xs font-bold tracking-wide text-kia-600 uppercase">{label}</span>
       {children}
     </label>
-  )
-}
-
-function Select({
-  value,
-  onChange,
-  options,
-}: {
-  value: number
-  onChange: (v: number) => void
-  options: { value: number; label: string }[]
-}) {
-  return (
-    <div className="relative">
-      <select
-        value={value}
-        onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full appearance-none rounded-xl border border-kia-100 bg-white px-3 py-2.5 pr-9 text-sm font-semibold text-kia-900 outline-none focus:border-kia-400 focus:ring-2 focus:ring-kia-100"
-      >
-        {options.map((o) => (
-          <option key={o.value} value={o.value}>
-            {o.label}
-          </option>
-        ))}
-      </select>
-      <IconChevron className="pointer-events-none absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 text-kia-400" />
-    </div>
   )
 }
 
