@@ -81,6 +81,12 @@ export default function App() {
 
           <div className="flex items-center gap-2">
             <ModeToggle mode={mode} onChange={setMode} />
+            <a
+              href="./anak-sekolah.html"
+              className="hidden rounded-full bg-fuchsia-50 px-3.5 py-2 text-xs font-semibold text-fuchsia-700 ring-1 ring-fuchsia-100 transition hover:bg-fuchsia-100 sm:inline-flex"
+            >
+              Usia 6–14 tahun
+            </a>
             {mode === 'web' && (
               <a
                 href="#pertumbuhan"
@@ -408,6 +414,12 @@ function Footer() {
               className="inline-flex items-center gap-2 rounded-full bg-kia-50 px-4 py-2 text-xs font-semibold text-kia-700 ring-1 ring-kia-100 transition hover:bg-kia-100"
             >
               Ayo Sehat Kemenkes <IconArrow className="h-3.5 w-3.5" />
+            </a>
+            <a
+              href="./anak-sekolah.html"
+              className="inline-flex items-center gap-2 rounded-full bg-fuchsia-50 px-4 py-2 text-xs font-semibold text-fuchsia-700 ring-1 ring-fuchsia-100 transition hover:bg-fuchsia-100"
+            >
+              Panduan usia 6–14 tahun <IconArrow className="h-3.5 w-3.5" />
             </a>
           </div>
         </div>
