@@ -34,7 +34,7 @@ export function Section({
 export function Card({ children, className = '' }: { children: ReactNode; className?: string }) {
   return (
     <div
-      className={`rounded-3xl border border-kia-100/80 bg-white/95 p-6 shadow-[0_10px_40px_-24px_rgba(219,39,119,0.45)] ${className}`}
+      className={`rounded-3xl border border-kia-100/80 bg-white/95 p-6 shadow-[0_10px_40px_-24px_var(--card-shadow)] ${className}`}
     >
       {children}
     </div>

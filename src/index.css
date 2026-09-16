@@ -170,3 +170,57 @@ input[type='range']::-moz-range-thumb {
     scroll-behavior: auto;
   }
 }
+
+/* ── Tema biru: halaman Anak Usia Sekolah (6–14 tahun) ─────── */
+/* Semua utility Tailwind (bg-kia-*, text-fuchsia-*, gradien) memakai
+   custom property, sehingga cukup menimpanya di dalam scope ini. */
+:root {
+  --card-shadow: rgb(219 39 119 / 0.45);
+}
+
+.theme-school {
+  --color-ink: #0b2947;
+
+  --color-kia-50: #eff6ff;
+  --color-kia-100: #dbeafe;
+  --color-kia-200: #bfdbfe;
+  --color-kia-300: #93c5fd;
+  --color-kia-400: #60a5fa;
+  --color-kia-500: #3b82f6;
+  --color-kia-600: #2563eb;
+  --color-kia-700: #1d4ed8;
+  --color-kia-800: #1e40af;
+  --color-kia-900: #1e3a8a;
+  --color-kia-950: #172554;
+
+  /* aksen indigo menggantikan fuchsia pada gradien & lencana */
+  --color-fuchsia-50: #eef2ff;
+  --color-fuchsia-100: #e0e7ff;
+  --color-fuchsia-200: #c7d2fe;
+  --color-fuchsia-300: #a5b4fc;
+  --color-fuchsia-400: #818cf8;
+  --color-fuchsia-500: #6366f1;
+  --color-fuchsia-600: #4f46e5;
+  --color-fuchsia-700: #4338ca;
+  --color-fuchsia-800: #3730a3;
+  --color-fuchsia-900: #312e81;
+
+  --card-shadow: rgb(37 99 235 / 0.35);
+
+  color: var(--color-ink);
+  background-color: #f2f7ff;
+}
+
+.theme-school input[type='range']::-webkit-slider-runnable-track {
+  background: linear-gradient(90deg, #bfdbfe, #60a5fa, #2563eb);
+}
+.theme-school input[type='range']::-webkit-slider-thumb {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgb(37 99 235 / 0.35);
+}
+.theme-school input[type='range']::-moz-range-track {
+  background: linear-gradient(90deg, #bfdbfe, #60a5fa, #2563eb);
+}
+.theme-school input[type='range']::-moz-range-thumb {
+  border-color: #2563eb;
+}

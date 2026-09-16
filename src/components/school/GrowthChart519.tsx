@@ -74,7 +74,7 @@ export function GrowthChart519({
 
   const lines = [
     { z: -2, color: '#f59e0b', width: 2 },
-    { z: 0, color: '#db2777', width: 3 },
+    { z: 0, color: '#2563eb', width: 3 },
     { z: 2, color: '#34d399', width: 2 },
   ]
 
@@ -109,7 +109,7 @@ export function GrowthChart519({
       >
         {gridValues.map((v) => (
           <g key={v}>
-            <line x1={PAD_L} x2={W - PAD_R} y1={yFor(v)} y2={yFor(v)} stroke="#fce7f3" strokeWidth="1" />
+            <line x1={PAD_L} x2={W - PAD_R} y1={yFor(v)} y2={yFor(v)} stroke="#dbeafe" strokeWidth="1" />
             <text x={PAD_L - 10} y={yFor(v)} textAnchor="end" dominantBaseline="middle" className="fill-kia-500" style={{ fontSize: 11 }}>
               {v.toFixed(v >= 100 ? 0 : 1)}
             </text>
@@ -122,7 +122,7 @@ export function GrowthChart519({
           </text>
         ))}
 
-        <path d={bandPath} fill="#db2777" opacity="0.1" />
+        <path d={bandPath} fill="#2563eb" opacity="0.1" />
 
         {lines.map((l, i) => (
           <path

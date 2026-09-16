@@ -34,8 +34,8 @@ export default function SchoolApp() {
   }, [])
 
   return (
-    <div className="min-h-screen">
-      <GeoBackdrop />
+    <div className="theme-school min-h-screen">
+      <GeoBackdrop tone="blue" />
 
       <header className="sticky top-0 z-40 border-b border-kia-100/70 bg-white/95">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">

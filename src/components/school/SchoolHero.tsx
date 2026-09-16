@@ -58,12 +58,12 @@ function Stat({ value, label }: { value: string; label: string }) {
 function HeroVisual() {
   return (
     <div className="relative">
-      <div className="rounded-[2rem] border border-kia-100 bg-white/95 p-6 shadow-[0_30px_70px_-40px_rgba(219,39,119,0.6)]">
+      <div className="rounded-[2rem] border border-kia-100 bg-white/95 p-6 shadow-[0_30px_70px_-40px_rgba(37,99,235,0.55)]">
         <svg viewBox="0 0 360 300" className="h-auto w-full" role="img" aria-label="Ilustrasi grafik pertumbuhan remaja">
           <defs>
             <linearGradient id="schoolBar" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f472b6" />
-              <stop offset="100%" stopColor="#db2777" />
+              <stop offset="0%" stopColor="#60a5fa" />
+              <stop offset="100%" stopColor="#2563eb" />
             </linearGradient>
           </defs>
 
@@ -90,7 +90,7 @@ function HeroVisual() {
           <path
             d="M28 246 C 96 232, 140 196, 190 150 S 292 66, 340 34"
             fill="none"
-            stroke="#db2777"
+            stroke="#2563eb"
             strokeWidth="4"
             strokeLinecap="round"
             strokeDasharray="1200"
@@ -101,11 +101,11 @@ function HeroVisual() {
             [202, 148],
             [306, 72],
           ].map(([cx, cy]) => (
-            <circle key={cx} cx={cx} cy={cy} r="7" fill="#fff" stroke="#db2777" strokeWidth="4" />
+            <circle key={cx} cx={cx} cy={cy} r="7" fill="#fff" stroke="#2563eb" strokeWidth="4" />
           ))}
 
-          <circle cx="46" cy="52" r="26" fill="#fde68a" opacity="0.7" />
-          <circle cx="322" cy="60" r="16" fill="#f9a8d4" />
+          <circle cx="46" cy="52" r="26" fill="#bfdbfe" opacity="0.8" />
+          <circle cx="322" cy="60" r="16" fill="#93c5fd" />
         </svg>
 
         <div className="mt-4 grid grid-cols-3 gap-3 text-center">
